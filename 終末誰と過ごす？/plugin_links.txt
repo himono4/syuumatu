@@ -1,0 +1,8 @@
+・[button_kr] 吉里吉里式の連結画像でボタンホバーとマウスダウンを可能にする
+http://tigrig.blog.fc2.com/blog-entry-1.html
+
+・wait機能拡張プラグイン
+https://no-brain.booth.pm/items/5375016
+
+・カメラ機能拡張
+https://github.com/tempura17654/tyranoscript_plugins/tree/master/data/others/plugin/tempura_camera2

@@ -1,0 +1,4 @@
+/* 文字だけでなく、ブロック単位でクリックできるように */
+.backlog_text {
+	display: block;
+}
