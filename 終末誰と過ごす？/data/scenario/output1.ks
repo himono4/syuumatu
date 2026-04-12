@@ -164,6 +164,7 @@ f.day +=1
 ;背景：廊下[n]
 *day2
 [bg storage="夕暮れの廊下.jpg"]
+[playbgm storage="iwashiro_hajimari_no_michi.mp3"]
 世界の終わりまでもう五日を切った。[n]
 学校に来ている人もいたりいなかったりで、校舎内はいつもより寂しく見える。[n]
 こんな世界の終わりになって学校に来る方がどうかしていると思うけど、どうやらこっちの世界で善行とやらを積んでおかないと”次の世界“に行ったとき酷い目にあう、みたいな噂が流れているらしい。[n]
@@ -205,8 +206,8 @@ f.day +=1
 [glink target="*map_02" text="いいえ" color="btn_07_black" size=20 width=500 y=300]
 [s]
 *day2_m
-[jump target=*minato_01 cond="f.favo_minato = 0"]
-[jump target=*minato_02 cond="f.favo_minato = 1"]
+[jump target=*minato_01 cond="f.favo_minato == 0"]
+[jump target=*minato_02 cond="f.favo_minato == 1"]
 
 *tosyositu_02
 [chara_show name="rituki" top=-250]
@@ -214,11 +215,11 @@ f.day +=1
 リツキ先輩に会いに行く？[n]
 [chara_hide name="rituki"]
 [glink target="*day2_r" text="はい" color="btn_07_black" size=20 width=500 y=200]
-[glink target="*map_01" text="いいえ" color="btn_07_black" size=20 width=500 y=300]
+[glink target="*map_02" text="いいえ" color="btn_07_black" size=20 width=500 y=300]
 [s]
 *day2_r
-[jump target=*rituki_01 cond="f.favo_rituki = 0"]
-[jump target=*rituki_02 cond="f.favo_rituki = 1"]
+[jump target=*rituki_01 cond="f.favo_rituki == 0"]
+[jump target=*rituki_02 cond="f.favo_rituki == 1"]
 
 *rikasitu_02
 [chara_show name="hiro" top=-500]
@@ -227,16 +228,17 @@ f.day +=1
 ヒロに会いに行く？[n]
 [chara_hide name="hiro"]
 [glink target="*day2_h" text="はい" color="btn_07_black" size=20 width=500 y=200]
-[glink target="*map_01" text="いいえ" color="btn_07_black" size=20 width=500 y=300]
+[glink target="*map_02" text="いいえ" color="btn_07_black" size=20 width=500 y=300]
 [s]
 *day2_h
-[jump target=*hiro_01 cond="f.favo_hiro = 0"]
-[jump target=*hiro_02 cond="f.favo_hiro = 1"]
+[jump target=*hiro_01 cond="f.favo_hiro == 0"]
+[jump target=*hiro_02 cond="f.favo_hiro == 1"]
 
 ;共通ルート　3日目[n]
 ;背景　廊下[n]
 *day3
 [bg storage="夕暮れの廊下.jpg"]
+[playbgm storage="iwashiro_hajimari_no_michi.mp3"]
 今日もマキメはいない。[n]
 マキメが隣にいないのはなんだか違和感だけど、まあ彼も彼なりに何かやり残したことをやっているのかもしれないと思うと探すのは野暮だろう。[n]
 みんなも、もしかすると流石にもう学校に残ってたりはしないのかもしれない。[n]
@@ -245,11 +247,57 @@ f.day +=1
 f.day +=1
 [endscript]
 ;画面遷移　マップ画面[n]
-[n]
+*map_03
+[bg storage="夕暮れの校舎.jpg"]
+[playbgm storage="iwashiro_hiru_no_niwa.mp3"]
+[clickable  x="610" y="130" width=" 46" height=" 46" target="*okujou_03" opacity="100" mouseopacity="150"  color="0xffffff"]
+[clickable x="400" y="250" width=46 height=46 target="*tosyositu_03" opacity="100" mouseopacity="150" color="0xffffff" ]
+[clickable x="800" y="160" width=46 height="46" target="*rikasitu_03" opacity="100" mouseopacity="150" color="0xffffff"]
+[s]
+
+*okujou_03
+[chara_show name="minato" top=-150]
+場所：屋上　会える人：ミナト君[n]
+ミナト君に会いに行く？[n]
+[chara_hide name="minato"]
+[glink target="*day3_m" text="はい" color="btn_07_black" size=20  width="500" y=200 ]
+[glink target="*map_03" text="いいえ" color="btn_07_black" size=20 width=500 y=300]
+[s]
+*day3_m
+[jump target=*minato_01 cond="f.favo_minato == 0"]
+[jump target=*minato_02 cond="f.favo_minato == 1"]
+[jump target=*minato_03 cond="f.favo_minato == 2 "]
+*tosyositu_03
+[chara_show name="rituki" top=-250]
+場所：図書室　会える人：リツキ先輩[n]
+リツキ先輩に会いに行く？[n]
+[chara_hide name="rituki"]
+[glink target="*day3_r" text="はい" color="btn_07_black" size=20 width=500 y=200]
+[glink target="*map_02" text="いいえ" color="btn_07_black" size=20 width=500 y=300]
+[s]
+*day3_r
+[jump target=*rituki_01 cond="f.favo_rituki == 0"]
+[jump target=*rituki_02 cond="f.favo_rituki == 1"]
+[jump target=*rituki_03 cond="f.favo_rituki == 2"]
+*rikasitu_03
+[chara_show name="hiro" top=-500]
+場所：理科室　会える人：ヒロ[n]
+この学校の地学教師で、実の兄。適当だけど器の広さから生徒には人気。[n]
+ヒロに会いに行く？[n]
+[chara_hide name="hiro"]
+[glink target="*day3_h" text="はい" color="btn_07_black" size=20 width=500 y=200]
+[glink target="*map_03" text="いいえ" color="btn_07_black" size=20 width=500 y=300]
+[s]
+*day3_h
+[jump target=*hiro_01 cond="f.favo_hiro == 0"]
+[jump target=*hiro_02 cond="f.favo_hiro == 1"]
+[jump target=*hiro_03 cond="f.favo_hiro == 2"]
+
 ;共通ルート　4日目[n]
 ;背景　廊下[n]
 *day4
 [bg storage="夕暮れの廊下.jpg"]
+[playbgm storage="iwashiro_hajimari_no_michi.mp3"]
 世界の終わりがいよいよ近づいてきて、学校に登校してくる人も少なくなってきた。[n]
 残された時間も少なくなって、例の噂のいうような善行を積むのも馬鹿らしくなっているのかもしれない。[n]
 世界の終わりになってまで、学校に行くなんて利口すぎる。[n]
@@ -266,6 +314,7 @@ f.day +=1
 ;背景　廊下[n]
 *day5
 [bg storage="夕暮れの廊下.jpg"]
+[playbgm storage="iwashiro_hajimari_no_michi.mp3"]
 世界が終わるまであと一日。[n]
 明日の夕方になれば、全てが終わって、私たちの存在は無に帰す。[n]
 生徒たちの中にも精神がおかしくなった感じの人もちらほら出始めている。[n]
@@ -356,15 +405,18 @@ f.day +=1
 [iscript]
 f.favo_minato +=1
 [endscript]
-[jump target=*day2 cond="f.day = 1"]
-[jump target=*day3 cond="f.day = 2"]
-[jump target=*day4 cond="f.day = 3"]
-[jump target=*day5 cond="f.day = 4"]
-[jump target=*day6 cond="f.day = 5"]
+[jump target=*day2 cond="f.day == 1"]
+[jump target=*day3 cond="f.day == 2"]
+[jump target=*day4 cond="f.day == 3"]
+[jump target=*day5 cond="f.day == 4"]
+[jump target=*day6 cond="f.day == 5"]
 ;二回目　ミナト[n]
 *minato_02
 ;背景：屋上[n]
+[bg storage="夕暮れの屋上.jpg"]
 ;ミナト立ち絵表示[n]
+[chara_show name="minato" top=-150]
+[playbgm storage="iwashiro_ashita_no_ashita_8bit.mp3"]
 【ミナト】「げっ。またあんたかよ」[n]
 屋上の扉を開いたとたん、フェンスの向こう側を見つめていたミナトくんはこっちを振り向いた。どうやら今日もここで死のうとしていたらしい。[n]
 「あれ、また邪魔しちゃった？」[n]
@@ -379,12 +431,14 @@ f.favo_minato +=1
 馴れ合いに堕することも、世間に流されることもなく生きるミナトくんは、地に足付けるどころか地面に根を張っているようにすら見える。[n]
 しかしミナトくんは、浮かない顔をした。[n]
 ;ミナト　憂い[n]
+[chara_mod name="minato" face="urei"]
 【ミナト】「……そりゃ、しっかりしなきゃいけなかったんだから、しょうがないでしょ」[n]
 【ミナト】「一人でも、生きていくしかなかったんだ」[n]
 「ふうん、そっか……」[n]
 それ以上のことは何も言えなかった。[n]
 何も知らないのに彼を安易に肯定するのは、侮辱になりうる。[n]
 【ミナト】「……なんであんたにこんな話しちゃったんだろ、俺」[n]
+[chara_mod name="minato" face="tuuzyou"]
 【ミナト】「あーあ。なんか嫌な気持ちになった。もう今日は帰ってくれない？」[n]
 「今日”は“ってことは、明日も来ていいってこと？」[n]
 【ミナト】「そういうことを言ってるわけじゃないだろ。人の揚げ足取るなよ」[n]
@@ -393,9 +447,16 @@ f.favo_minato +=1
 ミナトくんはそっぽを向く。[n]
 私はそんな彼に、返事なんてまるで期待せず、「またね」と声を掛ける。[n]
 やっぱり、ミナトくんからの返事はなかった。[n]
-[n]
+[iscript]
+f.favo_minato +=1
+[endscript]
+[jump target=*day2 cond="f.day == 1"]
+[jump target=*day3 cond="f.day == 2"]
+[jump target=*day4 cond="f.day == 3"]
+[jump target=*day5 cond="f.day == 4"]
+[jump target=*day6 cond="f.day == 5"]
 ;三回目　ミナト[n]
-*mianto_03
+*minato_03
 ;背景：屋上[n]
 ;ミナト　立ち絵表示[n]
 【ミナト】「なんだ、またあんたか」[n]
@@ -686,11 +747,11 @@ f.favo_minato +=1
 [iscript]
 f.favo_rituki +=1
 [endscript]
-[jump target=*day2 cond="f.day = 1"]
-[jump target=*day3 cond="f.day = 2"]
-[jump target=*day4 cond="f.day = 3"]
-[jump target=*day5 cond="f.day = 4"]
-[jump target=*day6 cond="f.day = 5"]
+[jump target=*day2 cond="f.day == 1"]
+[jump target=*day3 cond="f.day == 2"]
+[jump target=*day4 cond="f.day == 3"]
+[jump target=*day5 cond="f.day == 4"]
+[jump target=*day6 cond="f.day == 5"]
 ;リツキ　二回目[n]
 *rituki_02
 ;背景：図書室[n]
@@ -739,6 +800,7 @@ f.favo_rituki +=1
 先輩が怯えた顔をしている姿は、見たくなかった。[n]
 [n]
 ;リツキ　三回目[n]
+*rituki_03
 ;背景：図書室[n]
 ;リツキ　立ち絵表示[n]
 【リツキ】「あ」[n]
@@ -1029,11 +1091,11 @@ f.favo_rituki +=1
 [iscript]
 f.favo_hiro +=1
 [endscript]
-[jump target=*day2 cond="f.day = 1"]
-[jump target=*day3 cond="f.day = 2"]
-[jump target=*day4 cond="f.day = 3"]
-[jump target=*day5 cond="f.day = 4"]
-[jump target=*day6 cond="f.day = 5"]
+[jump target=*day2 cond="f.day == 1"]
+[jump target=*day3 cond="f.day == 2"]
+[jump target=*day4 cond="f.day == 3"]
+[jump target=*day5 cond="f.day == 4"]
+[jump target=*day6 cond="f.day == 5"]
 ;ヒロ　二回目[n]
 *hiro_02
 ;理科室[n]
@@ -1075,6 +1137,7 @@ f.favo_hiro +=1
 本当のヒロは、こっちなんだって。[n]
 [n]
 ;ヒロ　三回目[n]
+*hiro_03
 ;理科室[n]
 ;ヒロ　立ち絵表示[n]
 【ヒロ】「お前、まぁた来たのかよ」[n]
