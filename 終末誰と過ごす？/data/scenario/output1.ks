@@ -64,11 +64,11 @@
 ;１日目[n]
 ;背景：廊下[n]
 [iscript]
-f.flag = false
-f.day = 0
-f.favo_minato = 0
-f.favo_rituki = 0
-f.favo_hiro = 0
+f.flag = false;
+f.day = 0;
+f.favo_minato = 0;
+f.favo_rituki = 0;
+f.favo_hiro = 0;
 [endscript]
 
 [bg storage="夕暮れの廊下.jpg"]
@@ -206,8 +206,8 @@ f.day +=1
 [glink target="*map_02" text="いいえ" color="btn_07_black" size=20 width=500 y=300]
 [s]
 *day2_m
-[jump target=*minato_01 cond="f.favo_minato == 0"]
-[jump target=*minato_02 cond="f.favo_minato == 1"]
+[jump target=*minato_01 cond="f.favo_minato === 0"]
+[jump target=*minato_02 cond="f.favo_minato === 1"]
 
 *tosyositu_02
 [chara_show name="rituki" top=-250]
@@ -218,8 +218,8 @@ f.day +=1
 [glink target="*map_02" text="いいえ" color="btn_07_black" size=20 width=500 y=300]
 [s]
 *day2_r
-[jump target=*rituki_01 cond="f.favo_rituki == 0"]
-[jump target=*rituki_02 cond="f.favo_rituki == 1"]
+[jump target=*rituki_01 cond="f.favo_rituki === 0"]
+[jump target=*rituki_02 cond="f.favo_rituki === 1"]
 
 *rikasitu_02
 [chara_show name="hiro" top=-500]
@@ -231,8 +231,8 @@ f.day +=1
 [glink target="*map_02" text="いいえ" color="btn_07_black" size=20 width=500 y=300]
 [s]
 *day2_h
-[jump target=*hiro_01 cond="f.favo_hiro == 0"]
-[jump target=*hiro_02 cond="f.favo_hiro == 1"]
+[jump target=*hiro_01 cond="f.favo_hiro === 0"]
+[jump target=*hiro_02 cond="f.favo_hiro === 1"]
 
 ;共通ルート　3日目[n]
 ;背景　廊下[n]
@@ -360,6 +360,10 @@ f.day +=1
 ただ静かに受け入れた瞬間、私の意識はそこで途絶えた。[n]
 [n]
 [n]
+
+
+
+
 ;ミナトルート[n]
 ;一回目　ミナト[n]
 *minato_01
@@ -405,11 +409,14 @@ f.day +=1
 [iscript]
 f.favo_minato +=1
 [endscript]
-[jump target=*day2 cond="f.day == 1"]
-[jump target=*day3 cond="f.day == 2"]
-[jump target=*day4 cond="f.day == 3"]
-[jump target=*day5 cond="f.day == 4"]
-[jump target=*day6 cond="f.day == 5"]
+[jump target=*day2 cond="f.day === 1"]
+[jump target=*day3 cond="f.day === 2"]
+[jump target=*day4 cond="f.day === 3"]
+[jump target=*day5 cond="f.day === 4"]
+[jump target=*day6 cond="f.day === 5"]
+
+
+
 ;二回目　ミナト[n]
 *minato_02
 ;背景：屋上[n]
@@ -747,11 +754,11 @@ f.favo_minato +=1
 [iscript]
 f.favo_rituki +=1
 [endscript]
-[jump target=*day2 cond="f.day == 1"]
-[jump target=*day3 cond="f.day == 2"]
-[jump target=*day4 cond="f.day == 3"]
-[jump target=*day5 cond="f.day == 4"]
-[jump target=*day6 cond="f.day == 5"]
+[jump target=*day2 cond="f.day === 1"]
+[jump target=*day3 cond="f.day === 2"]
+[jump target=*day4 cond="f.day === 3"]
+[jump target=*day5 cond="f.day === 4"]
+[jump target=*day6 cond="f.day === 5"]
 ;リツキ　二回目[n]
 *rituki_02
 ;背景：図書室[n]
@@ -1091,11 +1098,11 @@ f.favo_rituki +=1
 [iscript]
 f.favo_hiro +=1
 [endscript]
-[jump target=*day2 cond="f.day == 1"]
-[jump target=*day3 cond="f.day == 2"]
-[jump target=*day4 cond="f.day == 3"]
-[jump target=*day5 cond="f.day == 4"]
-[jump target=*day6 cond="f.day == 5"]
+[jump target=*day2 cond="f.day === 1"]
+[jump target=*day3 cond="f.day === 2"]
+[jump target=*day4 cond="f.day === 3"]
+[jump target=*day5 cond="f.day === 4"]
+[jump target=*day6 cond="f.day === 5"]
 ;ヒロ　二回目[n]
 *hiro_02
 ;理科室[n]
