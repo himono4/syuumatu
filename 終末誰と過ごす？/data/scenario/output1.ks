@@ -4,10 +4,11 @@
 [start_keyconfig]
 
 [layopt layer="1" visible="true"]
-[bg storage="黒.png" time="100"]
-
+[bg storage="黒.png" time=100]
+[bg storage="終末まであと5日.png" time=1000]
+[wait time=2000]
 ;メニューボタンの表示
-
+[bg storage="夕暮れの廊下.jpg"]
 [button name="role_button" role="skip" graphic="button/skip.png" x=950 y=470]
 [button name="role_button" role="auto" graphic="button/auto.png" x=1050 y=470]
 [button name="role_button" role="save" graphic="button/save.png" x=1150 y=520]
@@ -66,7 +67,7 @@
 ;背景：廊下[n]
 
 
-[bg storage="夕暮れの廊下.jpg"]
+
 [layopt layer="1" visible="true"]
 [image layer="1" x="10" y="20" storage="../image/残り5日.png"]
 [playbgm storage="iwashiro_hajimari_no_michi.mp3"]
@@ -156,7 +157,22 @@ f.day +=1
 ;共通ルート　二日目[n]
 ;背景：廊下[n]
 *day2
+[mask effect="fadeIn" ]
+[bg storage="終末まであと4日.png"]
+[clearfix name="role_button"]
+@layopt layer=message0 visible=false
+[mask_off]
+[wait time=2000]
 [bg storage="夕暮れの廊下.jpg"]
+[button name="role_button" role="skip" graphic="button/skip.png" x=950 y=470]
+[button name="role_button" role="auto" graphic="button/auto.png" x=1050 y=470]
+[button name="role_button" role="save" graphic="button/save.png" x=1150 y=520]
+[button name="role_button" role="load" graphic="button/load.png" x=1150 y=560]
+[button name="role_button" role="backlog" graphic="button/log.png" x=1150 y=600]
+[button name="role_button" role="title" graphic="button/title.png" x=1150 y=640]
+[button name="role_button" role="sleepgame" storage="config.ks" graphic="button/config.png" x=1150 y=470]
+@layopt layer=message0 visible=true
+
 [playbgm storage="iwashiro_hajimari_no_michi.mp3"]
 世界の終わりまでもう五日を切った。[n]
 学校に来ている人もいたりいなかったりで、校舎内はいつもより寂しく見える。[n]
@@ -166,8 +182,9 @@ f.day +=1
 ……そういえば、今日はマキメの姿を見ていない。[n]
 マキメは今日、学校には来ていないんだろうか。[n]
 ;他三人のトゥルーエンドを見ている場合、ここで選択肢が出る[n]
-[glink target=*common_nm text="放っておく" color="btn_07_black" size=20  width="500" y=200 cond="sf.syukai > 0"]
-[glink target=*common_m text="マキメを探す" color="btn_07_black" size=20 width=500 y=300 cond="sf.syukai >= 4"]
+[glink target=*common_m text="マキメを探す" color="btn_07_black" size=20 width=500 y=300 cond="sf.minato_t >= 2 && sf.rituki_t >= 2 && sf.hiro_t >=2"]
+[glink target=*common_nm text="放っておく" color="btn_07_black" size=20  width="500" y=200 ]
+
 [s]
 ;「マキメを探す」[n]
 ;「放っておく」[n]
@@ -177,6 +194,7 @@ f.day +=1
 もし来ていたとしたら、今日一日私はマキメに無視されていたことになるし、逆に言えば私がマキメを無視していたことにもなる。[n]
 別に、そんなこと気にする間柄でもないけど。[n]
 なんとなくこのまま宙ぶらりんにしておくのもすわりが悪いので、まだ学校にいないか探してみよう。[n]
+[fadeoutbgm time=500]
 [jump storage="output2.ks"]
 ;マキメルートへ[n]
 ;「放っておく」を選んだ、もしくはまだ他三人のトゥルーエンドを見ていない場合[n]
@@ -234,7 +252,21 @@ f.day +=1
 ;共通ルート　3日目[n]
 ;背景　廊下[n]
 *day3
+[mask effect="fadeIn" ]
+[bg storage="終末まであと3日.png"]
+[clearfix name="role_button"]
+@layopt layer=message0 visible=false
+[mask_off]
+[wait time=2000]
 [bg storage="夕暮れの廊下.jpg"]
+[button name="role_button" role="skip" graphic="button/skip.png" x=950 y=470]
+[button name="role_button" role="auto" graphic="button/auto.png" x=1050 y=470]
+[button name="role_button" role="save" graphic="button/save.png" x=1150 y=520]
+[button name="role_button" role="load" graphic="button/load.png" x=1150 y=560]
+[button name="role_button" role="backlog" graphic="button/log.png" x=1150 y=600]
+[button name="role_button" role="title" graphic="button/title.png" x=1150 y=640]
+[button name="role_button" role="sleepgame" storage="config.ks" graphic="button/config.png" x=1150 y=470]
+@layopt layer=message0 visible=true
 [playbgm storage="iwashiro_hajimari_no_michi.mp3"]
 今日もマキメはいない。[n]
 マキメが隣にいないのはなんだか違和感だけど、まあ彼も彼なりに何かやり残したことをやっているのかもしれないと思うと探すのは野暮だろう。[n]
@@ -291,7 +323,21 @@ f.day +=1
 ;共通ルート　4日目[n]
 ;背景　廊下[n]
 *day4
+[mask effect="fadeIn" ]
+[bg storage="終末まであと2日.png"]
+[clearfix name="role_button"]
+@layopt layer=message0 visible=false
+[mask_off]
+[wait time=2000]
 [bg storage="夕暮れの廊下.jpg"]
+[button name="role_button" role="skip" graphic="button/skip.png" x=950 y=470]
+[button name="role_button" role="auto" graphic="button/auto.png" x=1050 y=470]
+[button name="role_button" role="save" graphic="button/save.png" x=1150 y=520]
+[button name="role_button" role="load" graphic="button/load.png" x=1150 y=560]
+[button name="role_button" role="backlog" graphic="button/log.png" x=1150 y=600]
+[button name="role_button" role="title" graphic="button/title.png" x=1150 y=640]
+[button name="role_button" role="sleepgame" storage="config.ks" graphic="button/config.png" x=1150 y=470]
+@layopt layer=message0 visible=true
 [playbgm storage="iwashiro_hajimari_no_michi.mp3"]
 世界の終わりがいよいよ近づいてきて、学校に登校してくる人も少なくなってきた。[n]
 残された時間も少なくなって、例の噂のいうような善行を積むのも馬鹿らしくなっているのかもしれない。[n]
@@ -356,7 +402,21 @@ f.day +=1
 ;共通ルート　5日目[n]
 ;背景　廊下[n]
 *day5
+[mask effect="fadeIn" ]
+[bg storage="終末まであと1日.png"]
+[clearfix name="role_button"]
+@layopt layer=message0 visible=false
+[mask_off]
+[wait time=2000]
 [bg storage="夕暮れの廊下.jpg"]
+[button name="role_button" role="skip" graphic="button/skip.png" x=950 y=470]
+[button name="role_button" role="auto" graphic="button/auto.png" x=1050 y=470]
+[button name="role_button" role="save" graphic="button/save.png" x=1150 y=520]
+[button name="role_button" role="load" graphic="button/load.png" x=1150 y=560]
+[button name="role_button" role="backlog" graphic="button/log.png" x=1150 y=600]
+[button name="role_button" role="title" graphic="button/title.png" x=1150 y=640]
+[button name="role_button" role="sleepgame" storage="config.ks" graphic="button/config.png" x=1150 y=470]
+@layopt layer=message0 visible=true
 [playbgm storage="iwashiro_hajimari_no_michi.mp3"]
 世界が終わるまであと一日。[n]
 明日の夕方になれば、全てが終わって、私たちの存在は無に帰す。[n]
@@ -420,7 +480,21 @@ f.day +=1
 
 ;共通ルート　6日目[n]
 *day6
+[mask effect="fadeIn" ]
+[bg storage="終末まであと0日.png"]
+[clearfix name="role_button"]
+@layopt layer=message0 visible=false
+[mask_off]
+[wait time=2000]
 [bg storage="夕暮れの廊下.jpg"]
+[button name="role_button" role="skip" graphic="button/skip.png" x=950 y=470]
+[button name="role_button" role="auto" graphic="button/auto.png" x=1050 y=470]
+[button name="role_button" role="save" graphic="button/save.png" x=1150 y=520]
+[button name="role_button" role="load" graphic="button/load.png" x=1150 y=560]
+[button name="role_button" role="backlog" graphic="button/log.png" x=1150 y=600]
+[button name="role_button" role="title" graphic="button/title.png" x=1150 y=640]
+[button name="role_button" role="sleepgame" storage="config.ks" graphic="button/config.png" x=1150 y=470]
+@layopt layer=message0 visible=true
 ;背景　廊下[n]
 [playbgm storage="iwashiro_rusu_no_shiro_de_odoru.mp3"]
 とうとう、世界が終わる当日になった。[n]
@@ -567,6 +641,7 @@ f.favo_minato +=1
 【ミナト】「……子ども扱いして」[n]
 ミナトくんはそっぽを向く。[n]
 私はそんな彼に、返事なんてまるで期待せず、「またね」と声を掛ける。[n]
+[chara_hide name="minato"]
 やっぱり、ミナトくんからの返事はなかった。[n]
 [fadeoutbgm time=500]
 [iscript]
@@ -794,7 +869,7 @@ f.favo_minato +=1
 ;背景：屋上[n]
 [bg storage="夕暮れの屋上.jpg"]
 ;立ち絵表示：ミナト[n]
-[chara_show name="minato" top=-150]
+[chara_show name="minato" face="hohoemi" top=-150]
 [playbgm storage="iwashiro_hidden_mode.mp3"]
 【ミナト】「……なんだ、あんたか」[n]
 世界が終わる日になっても、ミナトくんは屋上にいた。[n]
@@ -820,10 +895,20 @@ f.favo_minato +=1
 【ミナト】「あんたに出会えて、良かったよ」[n]
 ミナトくんは笑った。不器用な笑みだった。[n]
 【ミナト】「……さよなら」[n]
+[chara_hide name="minato"]
 そしてミナトくんは、こちらを向いたまま、背中から地面に落下していった。[n]
+[mask effect="fadeIn" ]
+[bg storage="黒.png"]
+[mask_off]
 ;背景：黒[n]
 人の身体が潰れる音を最後に、私の意識は途絶えた。[n]
-[n]
+[fadeoutbgm time=500]
+[mask effect="fadeIn" ]
+[bg storage="黒.png"]
+[clearfix name="role_button"]
+@layopt layer="message0" visible=false
+[mask_off]
+[jump storage="title.ks"]
 ;ミナト　トゥルーエンド（条件：好感度５以上）[n]
 *minato_true
 ;背景：屋上[n]
@@ -902,7 +987,7 @@ f.favo_minato +=1
 二人が地面にぶつかる直前。[n]
 そこで私の意識は途絶えた。[n]
 [iscript]
-sf.syukai += 1
+sf.minato_t += 1
 [endscript]
 ;リツキルート[n]
 ;リツキ　一回目[n]
@@ -1321,7 +1406,7 @@ f.favo_rituki +=1
 先輩の眩しい笑顔を焼き付けたその瞬間。[n]
 私の意識はそこで途絶えた。[n]
 [iscript]
-sf.syukai += 1
+sf.rituki_t += 1
 [endscript]
 ;ヒロルート[n]
 ;ヒロ　一回目[n]
@@ -1757,5 +1842,5 @@ f.favo_hiro +=1
 ヒロの言葉に頷いた途端、視界が眩い光に包まれた。[n]
 二人だけの約束を最後に、私の意識はそこで途絶えた。[n]
 [iscript]
-sf.syukai += 1
+sf.hiro_t += 1
 [endscript]

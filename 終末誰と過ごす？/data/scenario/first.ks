@@ -42,8 +42,16 @@
 ;バックログジャンププラグイン読込
 ;[plugin name="tyrano-backlog-jump"]
 
-[if exp="sf.syukai==null"]
-[eval exp="sf.syukai=1"]
+[if exp="sf.minato_t==null"]
+[eval exp="sf.minato_t=1"]
+[endif]
+
+[if exp="sf.rituki_t == null"]
+[eval exp="sf.rituki_t == 1"]
+[endif]
+
+[if exp="sf.hiro_t == null"]
+[eval exp="sf.hiro_t == 1"]
 [endif]
 
 [iscript]
