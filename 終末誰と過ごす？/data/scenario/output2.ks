@@ -1,3 +1,66 @@
+*start
+[cm  ]
+[clearfix]
+[start_keyconfig]
+
+[layopt layer="1" visible="true"]
+[bg storage="黒.png" time="100"]
+
+;メニューボタンの表示
+
+[button name="role_button" role="skip" graphic="button/skip.png" x=950 y=470]
+[button name="role_button" role="auto" graphic="button/auto.png" x=1050 y=470]
+[button name="role_button" role="save" graphic="button/save.png" x=1150 y=520]
+[button name="role_button" role="load" graphic="button/load.png" x=1150 y=560]
+[button name="role_button" role="backlog" graphic="button/log.png" x=1150 y=600]
+[button name="role_button" role="title" graphic="button/title.png" x=1150 y=640]
+[button name="role_button" role="sleepgame" storage="config.ks" graphic="button/config.png" x=1150 y=470]
+
+
+
+;メッセージウィンドウの設定
+[position layer="message0" frame="frame.png" left=0 top=500 width=1280 height=220 visible=true]
+
+;文字が表示される領域を調整
+[position layer=message0 page=fore margint="20" marginl="240" marginr="210" marginb="20"]
+
+
+;メッセージウィンドウの表示
+@layopt layer=message0 visible=true
+
+;キャラクターの名前が表示される文字領域
+[ptext name="chara_name_area" layer="message0" color="white"   size=30  x=200 y=500]
+
+;上記で定義した領域がキャラクターの名前表示であることを宣言（これがないと#の部分でエラーになります）
+[chara_config ptext="chara_name_area"]
+;フォントの影
+;このゲームで登場するキャラクターを宣言
+[chara_new  name="makime" storage="chara/makime/makime_tuuzyou2.png" width = 950 height = 1688]
+[chara_new name="hiro" storage="chara/hiro/hiro_tuuzyou.png" width = 1080 height = 1920]
+[chara_new name="rituki" storage="chara/rituki/rituki_tuuzyou.png"  width = 1080 height = 1920]
+[chara_new name="minato" storage="chara/minato/minato_tuuzyou.png"  width = 950 height = 1688]
+;キャラクターの表情登録
+[chara_face name="makime" face="tuuzyou" storage="chara/makime/makime_tuuzyou2.png"]
+[chara_face name="makime" face="tuuzyou2" storage="chara/makime/makime_tuuzyou.png"]
+[chara_face name="makime" face="odoroki" storage="chara/makime/odoroki.png"] 
+[chara_face name="makime" face="urei" storage="chara/makime/makime_urei.png"]
+[chara_face name="makime" face="sinken" storage="chara/makime/makime_sinken.png"]
+[chara_face name="hiro" face="tuuzyou" storage="chara/hiro/hiro_tuuzyou.png"]
+[chara_face name="hiro" face="tuuzyou2" storage="chara/hiro/tuuzyou2.png"]
+[chara_face name="hiro" face="akire" storage="chara/hiro/akire.png"]
+[chara_face name="hiro" face="hohoemi" storage="chara/hiro/hohoemi.png"]
+[chara_face name="rituki" face="tuuzyou" storage="chara/rituki/rituki_tuuzyou.png"]
+[chara_face name="rituki" face="tuuzyou2" storage="chara/rituki/tuuzyou2.png"]
+[chara_face name="rituki" face="odoroki" storage="chara/rituki/odoroki.png"]
+[chara_face name="rituki" face="urei" storage="chara/rituki/urei.png"]
+[chara_face name="minato" face="tuuzyou" storage="chara/minato/minato_tuuzyou.png"]
+[chara_face name="minato" face="tuuzyou2" storage="chara/minato/tuuzyou2.png"]
+[chara_face name="minato" face="urei" storage="chara/minato/urei.png"]
+[chara_face name="minato" face="hohoemi" storage="chara/minato/hohoemi.png"]
+
+
+
+
 ;マキメルート[n]
 ;二日目[n]
 ;背景：教室[n]

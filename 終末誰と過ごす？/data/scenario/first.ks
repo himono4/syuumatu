@@ -42,6 +42,17 @@
 ;バックログジャンププラグイン読込
 ;[plugin name="tyrano-backlog-jump"]
 
+[if exp="sf.syukai==null"]
+[eval exp="sf.syukai=1"]
+[endif]
+
+[iscript]
+f.flag = false;
+f.day = 0;
+f.favo_minato = 0;
+f.favo_rituki = 0;
+f.favo_hiro = 0;
+[endscript]
 
 ;タイトル画面へ移動
 @jump storage="title.ks"
