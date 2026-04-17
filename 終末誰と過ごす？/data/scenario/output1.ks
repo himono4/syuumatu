@@ -468,8 +468,8 @@ f.day +=1
 場所：理科室　会える人：ヒロ[n]
 ヒロに会いに行く？[n]
 [chara_hide name="hiro"]
-[glink target="*day4_h" text="はい" color="btn_07_black" size=20 width=500 y=200]
-[glink target="*map_04" text="いいえ" color="btn_07_black" size=20 width=500 y=300]
+[glink target="*day5_h" text="はい" color="btn_07_black" size=20 width=500 y=200]
+[glink target="*map_05" text="いいえ" color="btn_07_black" size=20 width=500 y=300]
 [s]
 *day5_h
 [jump target=*hiro_01 cond="f.favo_hiro == 0"]
@@ -514,7 +514,7 @@ f.day +=1
 [jump target=*rituki_normal cond="f.favo_rituki >=3 && f.favo_rituki <5"]
 [jump target=*rituki_true cond="f.favo_rituki >= 5"]
 [jump target=*hiro_normal cond="f.favo_hiro >= 3 && f.favo_hiro < 5"]
-[jump target=*hiro_true cond="f.favo_hiro >5"]
+[jump target=*hiro_true cond="f.favo_hiro >=5"]
 ;誰のエンド条件も満たしていない場合[n]
 *normal
 別に、特定の誰かと一緒に終末を過ごそうという気にはならなかった。[n]
@@ -538,10 +538,14 @@ f.day +=1
 なんてことをうだうだ考えていると、瞼越しにでも感じるくらいまばゆい光に焼かれる。[n]
 ああ、きっとこれが、世界の終わりなんだろう。[n]
 ただ静かに受け入れた瞬間、私の意識はそこで途絶えた。[n]
+;エンド１　祈り
+[fadeoutbgm time=500]
 [mask effect="fadeIn" ]
-[bg storage="黒.png"]
-[cm]
+[bg storage="END1.png"]
+[clearfix name="role_button"]
+@layopt layer="message0" visible=false
 [mask_off]
+[wait time=2000]
 [jump storage="title.ks"]
 
 
@@ -902,12 +906,14 @@ f.favo_minato +=1
 [mask_off]
 ;背景：黒[n]
 人の身体が潰れる音を最後に、私の意識は途絶えた。[n]
+;エンド２　観測
 [fadeoutbgm time=500]
 [mask effect="fadeIn" ]
-[bg storage="黒.png"]
+[bg storage="END2.png"]
 [clearfix name="role_button"]
 @layopt layer="message0" visible=false
 [mask_off]
+[wait time=2000]
 [jump storage="title.ks"]
 ;ミナト　トゥルーエンド（条件：好感度５以上）[n]
 *minato_true
@@ -929,6 +935,7 @@ f.favo_minato +=1
 「本当に、飛び降りるんだね」[n]
 【ミナト】「……うん」[n]
 言いながらも、ミナトくんは声が震えていた。笑っているように見えて、その顔は青白い。[n]
+[chara_mod name="minato" face="urei"]
 【ミナト】「飛び降りるから、さ……見ててよ、ねえ」[n]
 呼吸は荒く、視線は泳いで落ち着かない。[n]
 「ねえ、大丈夫？」[n]
@@ -986,9 +993,18 @@ f.favo_minato +=1
 それでも心は不思議と落ち着いていた。ミナトくんの手の温もりがあるからだろうか。[n]
 二人が地面にぶつかる直前。[n]
 そこで私の意識は途絶えた。[n]
+;エンド３　空中ワルツ
 [iscript]
 sf.minato_t += 1
 [endscript]
+[fadeoutbgm time=500]
+[mask effect="fadeIn" ]
+[bg storage="END3.png"]
+[clearfix name="role_button"]
+@layopt layer="message0" visible=false
+[mask_off]
+[wait time=2000]
+[jump storage="title.ks"]
 ;リツキルート[n]
 ;リツキ　一回目[n]
 *rituki_01
@@ -1356,6 +1372,7 @@ f.favo_rituki +=1
 と言って、先輩は手に持っていた本を開く。[n]
 なんでもない、普通の一日のような一瞬。[n]
 しかし、その瞬間、唐突に視界が白んだ。[n]
+;エンド４　おとぎ話の終わり
 [mask effect="fadeIn" ]
 [chara_hide name="rituki"]
 [bg storage="白.png"]
@@ -1364,8 +1381,18 @@ f.favo_rituki +=1
 ああ、ここで終わるのか、と思うのもつかの間。[n]
 私の意識は、そこで途絶えた。[n]
 [fadeoutbgm time=500]
+[mask effect="fadeIn" ]
+[bg storage="END4.png"]
+[clearfix name="role_button"]
+@layopt layer="message0" visible=false
+[mask_off]
+[wait time=2000]
+[jump storage="title.ks"]
 ;リツキ　トゥルーエンド（条件：好感度５以上）[n]
 *rituki_true
+[bg storage="夕暮れの図書室.jpg"]
+[playbgm storage="iwashiro_yoru_no_oko.mp3"]
+[chara_show name="rituki" top=-250]
 ;背景　図書室[n]
 ;リツキ　立ち絵表示[n]
 【リツキ】「こんにちは。本当に来てくれたんだね」[n]
@@ -1394,6 +1421,7 @@ f.favo_rituki +=1
 【リツキ】「カムパネルラ、僕たち一緒に行こうねえ」[n]
 そう言って、私の方を見る。先輩は、優し気な笑みを浮かべていた。[n]
 「一緒に銀河鉄道に乗れたらよかったのに」[n]
+[chara_mod name="rituki" face="urei"]
 【リツキ】「そうだね。……次の世界には、銀河鉄道が本当にあったらいいなあ」[n]
 「そのときは、一緒に乗って、絶対、一緒に帰ってきましょうね」[n]
 【リツキ】「そうだね……」[n]
@@ -1402,12 +1430,22 @@ f.favo_rituki +=1
 【リツキ】「……ねえ」[n]
 「なんですか」[n]
 ;リツキ　笑顔[n]
+[chara_mod name="rituki" face="tuuzyou"]
 【リツキ】「最後まで、ぼくと一緒にいてくれて、ありがとう」[n]
 先輩の眩しい笑顔を焼き付けたその瞬間。[n]
 私の意識はそこで途絶えた。[n]
+;エンド５　ほんとうのさいわい
 [iscript]
 sf.rituki_t += 1
 [endscript]
+[fadeoutbgm time=500]
+[mask effect="fadeIn" ]
+[bg storage="END5.png"]
+[clearfix name="role_button"]
+@layopt layer="message0" visible=false
+[mask_off]
+[wait time=2000]
+[jump storage="title.ks"]
 ;ヒロルート[n]
 ;ヒロ　一回目[n]
 *hiro_01
@@ -1746,7 +1784,7 @@ f.favo_hiro +=1
 [bg storage="夕暮れの理科室.jpg"]
 いつも通り地学室に行くと、やっぱりヒロがいた。[n]
 ;ヒロ　立ち絵表示[n]
-[chara_show name="hiro" face="akire"]
+[chara_show name="hiro" face="akire" top=-500]
 [playbgm storage="iwashiro_hidden_mode.mp3"]
 【ヒロ】「……なんだ、ここにいるのバレちまったか」[n]
 「家には帰らないだろうなって」[n]
@@ -1781,14 +1819,21 @@ f.favo_hiro +=1
 [chara_mod name="hiro" face="hohoemi"]
 【ヒロ】「生まれてきてくれて、ありがとう」[n]
 [mask effect="fadeIn" ]
-[bg storage="白.png"]
-[chara_hide name="hiro"]
+[bg storage="白.png" time=100]
+[chara_hide name="hiro" time=100]
 [mask_off]
 ;背景　白[n]
 その言葉を聞いた途端、急速に視界が白く染まった。[n]
 返事の言葉を伝えることなく、私の意識はそこで途絶えた。[n]
+;エンド６　
 [fadeoutbgm time=500]
-[n]
+[mask effect="fadeIn" ]
+[bg storage="END6.png"]
+[clearfix name="role_button"]
+@layopt layer="message0" visible=false
+[mask_off]
+[wait time=2000]
+[jump storage="title.ks"]
 ;ヒロ　トゥルーエンド（条件：好感度５以上）[n]
 *hiro_true
 [fadeoutbgm time=500]
@@ -1836,11 +1881,19 @@ f.favo_hiro +=1
 「……うん！」[n]
 ;背景　白[n]
 [mask effect="fadeIn" ]
-[bg storage="白.png"]
-[chara_hide name="hiro"]
+[bg storage="白.png" time=100]
+[chara_hide name="hiro" time=100]
 [mask_off]
 ヒロの言葉に頷いた途端、視界が眩い光に包まれた。[n]
 二人だけの約束を最後に、私の意識はそこで途絶えた。[n]
 [iscript]
 sf.hiro_t += 1
 [endscript]
+[fadeoutbgm time=500]
+[mask effect="fadeIn" ]
+[bg storage="END7.png" ]
+[clearfix name="role_button"]
+@layopt layer="message0" visible=false
+[mask_off]
+[wait time=2000]
+[jump storage="title.ks"]
