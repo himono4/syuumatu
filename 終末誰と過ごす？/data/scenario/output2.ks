@@ -759,9 +759,8 @@
 [fadeoutbgm time=500]
 [mask effect="fadeIn" ]
 [chara_hide name="makime"]
-[bg storage="END9.png"]
+[bg storage="黒.png"]
 [clearfix name="role_button"]
 @layopt layer="message0" visible=false
 [mask_off]
-[wait time=2000]
-[jump storage="title.ks"]
+[jump storage="output3.ks"]
