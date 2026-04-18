@@ -66,10 +66,15 @@
 ;１日目[n]
 ;背景：廊下[n]
 
-
+[iscript]
+f.flag = false;
+f.day = 0;
+f.favo_minato = 0;
+f.favo_rituki = 0;
+f.favo_hiro = 0;
+[endscript]
 
 [layopt layer="1" visible="true"]
-[image layer="1" x="10" y="20" storage="../image/残り5日.png"]
 [playbgm storage="iwashiro_hajimari_no_michi.mp3"]
 　この世界は、今週末にはもう終末を迎えます。[n]
 　なんて、ダジャレみたいなフレーズを今朝のニュース番組で聞いた。[n]
@@ -120,9 +125,9 @@ f.day +=1
 ;画面遷移　マップ選択画面[n]
 *map_01
 [bg storage="夕暮れの校舎.jpg"]
-[clickable  x="610" y="130" width=" 46" height=" 46" target="*okujou_01" opacity="100" mouseopacity="150"  color="0xffffff"]
-[clickable x="400" y="250" width=46 height=46 target="*tosyositu_01" opacity="100" mouseopacity="150" color="0xffffff" ]
-[clickable x="800" y="160" width=46 height="46" target="*rikasitu_01" opacity="100" mouseopacity="150" color="0xffffff"]
+[clickable  x="610" y="105" width=" 80" height=" 80" target="*okujou_01" opacity="0" mouseopacity="0"  color="0xffffff"]
+[clickable x="400" y="275" width=80 height=80 target="*tosyositu_01" opacity="0" mouseopacity="0" color="0xffffff" ]
+[clickable x="800" y="140" width=80 height=80 target="*rikasitu_01" opacity="0" mouseopacity="0" color="0xffffff"]
 [s]
 *okujou_01
 [chara_show name="minato" top=-150]
@@ -209,9 +214,9 @@ f.day +=1
 ;画面遷移　マップ画面[n]
 *map_02
 [bg storage="夕暮れの校舎.jpg"]
-[clickable  x="610" y="130" width=" 46" height=" 46" target="*okujou_02" opacity="100" mouseopacity="150"  color="0xffffff"]
-[clickable x="400" y="250" width=46 height=46 target="*tosyositu_02" opacity="100" mouseopacity="150" color="0xffffff" ]
-[clickable x="800" y="160" width=46 height="46" target="*rikasitu_02" opacity="100" mouseopacity="150" color="0xffffff"]
+[clickable  x="610" y="105" width=" 80" height=" 80" target="*okujou_02" opacity="0" mouseopacity="0"  color="0xffffff"]
+[clickable x="400" y="275" width=80 height=80 target="*tosyositu_02" opacity="0" mouseopacity="0" color="0xffffff" ]
+[clickable x="800" y="140" width=80 height="80" target="*rikasitu_02" opacity="0" mouseopacity="0" color="0xffffff"]
 [s]
 
 *okujou_02
@@ -279,9 +284,9 @@ f.day +=1
 ;画面遷移　マップ画面[n]
 *map_03
 [bg storage="夕暮れの校舎.jpg"]
-[clickable  x="610" y="130" width=" 46" height=" 46" target="*okujou_03" opacity="100" mouseopacity="150"  color="0xffffff"]
-[clickable x="400" y="250" width=46 height=46 target="*tosyositu_03" opacity="100" mouseopacity="150" color="0xffffff" ]
-[clickable x="800" y="160" width=46 height="46" target="*rikasitu_03" opacity="100" mouseopacity="150" color="0xffffff"]
+[clickable  x="610" y="105" width=" 80" height=" 80" target="*okujou_03" opacity="0" mouseopacity="0"  color="0xffffff"]
+[clickable x="400" y="275" width=80 height=80 target="*tosyositu_03" opacity="0" mouseopacity="0" color="0xffffff" ]
+[clickable x="800" y="140" width=80 height="80" target="*rikasitu_03" opacity="0" mouseopacity="0" color="0xffffff"]
 [s]
 
 *okujou_03
@@ -353,9 +358,9 @@ f.day +=1
 ;画面遷移　マップ画面[n]
 *map_04
 [bg storage="夕暮れの校舎.jpg"]
-[clickable  x="610" y="130" width=" 46" height=" 46" target="*okujou_04" opacity="100" mouseopacity="150"  color="0xffffff"]
-[clickable x="400" y="250" width=46 height=46 target="*tosyositu_04" opacity="100" mouseopacity="150" color="0xffffff" ]
-[clickable x="800" y="160" width=46 height="46" target="*rikasitu_04" opacity="100" mouseopacity="150" color="0xffffff"]
+[clickable  x="610" y="105" width=" 80" height=" 80" target="*okujou_04" opacity="0" mouseopacity="0"  color="0xffffff"]
+[clickable x="400" y="275" width=80 height=80 target="*tosyositu_04" opacity="0" mouseopacity="0" color="0xffffff" ]
+[clickable x="800" y="140" width=80 height="80" target="*rikasitu_04" opacity="0" mouseopacity="0" color="0xffffff"]
 [s]
 
 *okujou_04
@@ -430,9 +435,9 @@ f.day +=1
 ;画面遷移　マップ移動[n]
 *map_05
 [bg storage="夕暮れの校舎.jpg"]
-[clickable  x="610" y="130" width=" 46" height=" 46" target="*okujou_05" opacity="100" mouseopacity="150"  color="0xffffff"]
-[clickable x="400" y="250" width=46 height=46 target="*tosyositu_05" opacity="100" mouseopacity="150" color="0xffffff" ]
-[clickable x="800" y="160" width=46 height="46" target="*rikasitu_05" opacity="100" mouseopacity="150" color="0xffffff"]
+[clickable  x="610" y="105" width=" 80" height=" 80" target="*okujou_05" opacity="0" mouseopacity="0"  color="0xffffff"]
+[clickable x="400" y="275" width=80 height=80 target="*tosyositu_05" opacity="0" mouseopacity="0" color="0xffffff" ]
+[clickable x="800" y="140" width=80 height="80" target="*rikasitu_05" opacity="0" mouseopacity="0" color="0xffffff"]
 [s]
 *okujou_05
 [chara_show name="minato" top=-150]
@@ -1047,8 +1052,9 @@ sf.minato_t += 1
 「おすすめの話教えてください。流石に今から全部読んでたら、日が暮れちゃうと思うので」[n]
 【リツキ】「それじゃあね～、んー、これと、これと……」[n]
 抱えていた本の目次を開き、指差していく先輩。[n]
-先輩との、本を介した穏やかなコミュニケーションは、とても心地よかった。[n]
 [chara_hide name="rituki"]
+先輩との、本を介した穏やかなコミュニケーションは、とても心地よかった。[n]
+
 [fadeoutbgm time=500]
 [iscript]
 f.favo_rituki +=1
@@ -1084,7 +1090,7 @@ f.favo_rituki +=1
 「別に、変なこと言ったっていいのに」[n]
 【リツキ】「……そうなの？」[n]
 「一言も変なこと言わない人の方がつまんないですよ、多分」[n]
-[chara_mod name="rituki" face="hohoemi"]
+[chara_mod name="rituki" face="tuuzyou"]
 【リツキ】「それもそうかも」[n]
 先輩はくすくす笑う。[n]
 【リツキ】「それじゃあ、もう一つ、変なこと言ってもいいかな」[n]
@@ -1375,8 +1381,8 @@ f.favo_rituki +=1
 しかし、その瞬間、唐突に視界が白んだ。[n]
 ;エンド４　おとぎ話の終わり
 [mask effect="fadeIn" ]
-[chara_hide name="rituki"]
-[bg storage="白.png"]
+[chara_hide name="rituki" time=100]
+[bg storage="白.png" time=100]
 [mask_off]
 ;背景：白[n]
 ああ、ここで終わるのか、と思うのもつかの間。[n]
@@ -1434,6 +1440,10 @@ f.favo_rituki +=1
 [chara_mod name="rituki" face="tuuzyou"]
 【リツキ】「最後まで、ぼくと一緒にいてくれて、ありがとう」[n]
 先輩の眩しい笑顔を焼き付けたその瞬間。[n]
+[mask effect="fadeIn" ]
+[chara_hide name="rituki" time=100]
+[bg storage="白.png" time=100]
+[mask_off]
 私の意識はそこで途絶えた。[n]
 ;エンド５　ほんとうのさいわい
 [iscript]

@@ -54,13 +54,7 @@
 [eval exp="sf.hiro_t == 1"]
 [endif]
 
-[iscript]
-f.flag = false;
-f.day = 0;
-f.favo_minato = 0;
-f.favo_rituki = 0;
-f.favo_hiro = 0;
-[endscript]
+
 
 ;タイトル画面へ移動
 @jump storage="title.ks"

@@ -138,6 +138,7 @@
 [chara_hide name="makime"]
 引き留める間もなく、マキメはまるで蜃気楼のように姿を消してしまう。[n]
 突然告げられた別れを、私はただただ、受け入れるしかなかった。[n]
+[fadeoutbgm time=500]
 ;共通ルートに戻る[n]
 [jump storage="output1.ks" target=*day3]
 ;「それでもかまわない」を選んだ場合[n]
@@ -227,7 +228,9 @@
 「明日も来ていい？」[n]
 【マキメ】「別に構わない。明日もここにいるから、来たければ来るといいよ」[n]
 明日もまた会う約束をすること。それが今、一番大事だった。[n]
+[fadeoutbgm time=500]
 [mask effect="fadeIn" ]
+[chara_hide name="makime"]
 [bg storage="終末まであと2日.png"]
 [clearfix name="role_button"]
 @layopt layer=message0 visible=false
@@ -287,7 +290,9 @@
 この頃のマキメは特に不可思議な言動が増えた。[n]
 だけどとりあえず、明日も会う約束をすることができた。[n]
 ひとまず、マキメにはまだ、私と関わり続ける意志があるようだった。[n]
+[fadeoutbgm time=500]
 [mask effect="fadeIn" ]
+[chara_hide_all]
 [bg storage="終末まであと1日.png"]
 [clearfix name="role_button"]
 @layopt layer=message0 visible=false
