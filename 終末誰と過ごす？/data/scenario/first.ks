@@ -46,12 +46,12 @@
 [eval exp="sf.minato_t=1"]
 [endif]
 
-[if exp="sf.rituki_t == null"]
-[eval exp="sf.rituki_t == 1"]
+[if exp="sf.rituki_t==null"]
+[eval exp="sf.rituki_t=1"]
 [endif]
 
-[if exp="sf.hiro_t == null"]
-[eval exp="sf.hiro_t == 1"]
+[if exp="sf.hiro_t==null"]
+[eval exp="sf.hiro_t=1"]
 [endif]
 
 

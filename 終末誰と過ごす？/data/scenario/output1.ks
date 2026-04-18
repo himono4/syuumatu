@@ -74,6 +74,11 @@ f.favo_rituki = 0;
 f.favo_hiro = 0;
 [endscript]
 
+;sf.minato_t の内容 : [emb exp="sf.minato_t"][l][r]
+;sf.rituki_t の内容 : [emb exp="sf.rituki_t"][l][r]
+;sf.hiro_t の内容 : [emb exp="sf.hiro_t"][l][r]
+
+
 [layopt layer="1" visible="true"]
 [playbgm storage="iwashiro_hajimari_no_michi.mp3"]
 　この世界は、今週末にはもう終末を迎えます。[n]
