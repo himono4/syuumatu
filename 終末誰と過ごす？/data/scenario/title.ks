@@ -7,9 +7,10 @@
 
 *start 
 
-[button x=150 y=580 graphic="title/button_start.png" enterimg="title/button_start2.png"  target="gamestart" keyfocus="1"]
-[button x=450 y=580 graphic="title/button_load.png" enterimg="title/button_load2.png" role="load" keyfocus="2"]
-[button x=750 y=580 graphic="title/button_config.png" enterimg="title/button_config2.png" role="sleepgame" storage="config.ks" keyfocus="5"]
+[glink x=70 y=580 width=250 color="btn_07_black" text="はじめから" target="gamestart" keyfocus="1"]
+[glink x=370 y=580 width="250" color="btn_07_black" text="つづきから" role="load" keyfocus="2"]
+[glink x=670 y=580 width=250 role="sleepgame" color="btn_07_black" text="設定" storage="config.ks" keyfocus="3"]
+[glink x=970 y=580 width=250 storage="cg.ks" text="エンドリスト" color="btn_07_black" keyfocus=4]
 
 [s]
 

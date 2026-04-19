@@ -39,6 +39,8 @@
 ;ボイス再生拡張
 [plugin name="voiceplay_ex"]
 
+[plugin name="glink_ex"]
+
 ;バックログジャンププラグイン読込
 ;[plugin name="tyrano-backlog-jump"]
 

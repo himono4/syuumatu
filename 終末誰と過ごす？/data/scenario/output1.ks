@@ -553,6 +553,7 @@ f.day +=1
 [fadeoutbgm time=500]
 [mask effect="fadeIn" ]
 [bg storage="END1.png"]
+[cg storage="END1.png"]
 [clearfix name="role_button"]
 @layopt layer="message0" visible=false
 [mask_off]
@@ -921,6 +922,7 @@ f.favo_minato +=1
 [fadeoutbgm time=500]
 [mask effect="fadeIn" ]
 [bg storage="END2.png"]
+[cg storage="END2.png"]
 [clearfix name="role_button"]
 @layopt layer="message0" visible=false
 [mask_off]
@@ -1011,6 +1013,7 @@ sf.minato_t += 1
 [fadeoutbgm time=500]
 [mask effect="fadeIn" ]
 [bg storage="END3.png"]
+[cg storage="END3.png"]
 [clearfix name="role_button"]
 @layopt layer="message0" visible=false
 [mask_off]
@@ -1395,6 +1398,7 @@ f.favo_rituki +=1
 [fadeoutbgm time=500]
 [mask effect="fadeIn" ]
 [bg storage="END4.png"]
+[cg storage="END4.png"]
 [clearfix name="role_button"]
 @layopt layer="message0" visible=false
 [mask_off]
@@ -1457,6 +1461,7 @@ sf.rituki_t += 1
 [fadeoutbgm time=500]
 [mask effect="fadeIn" ]
 [bg storage="END5.png"]
+[cg storage="END5.png"]
 [clearfix name="role_button"]
 @layopt layer="message0" visible=false
 [mask_off]
@@ -1845,6 +1850,7 @@ f.favo_hiro +=1
 [fadeoutbgm time=500]
 [mask effect="fadeIn" ]
 [bg storage="END6.png"]
+[cg storage="END6.png"]
 [clearfix name="role_button"]
 @layopt layer="message0" visible=false
 [mask_off]
@@ -1908,6 +1914,7 @@ sf.hiro_t += 1
 [fadeoutbgm time=500]
 [mask effect="fadeIn" ]
 [bg storage="END7.png" ]
+[cg storage="END7.png"]
 [clearfix name="role_button"]
 @layopt layer="message0" visible=false
 [mask_off]

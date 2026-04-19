@@ -44,9 +44,15 @@
 @jump target=&tf.target_page
 
 *page_0
-[cg_image_button graphic="rouka.jpg,room.jpg,title.png" no_graphic="../../tyrano/images/system/noimage.png" x=60 y=130 width=160 height=140 folder="bgimage" ]
-[cg_image_button graphic="room.jpg" no_graphic="../../tyrano/images/system/noimage.png" x=250 y=130 width=160 height=140 folder="bgimage" ]
-
+[cg_image_button graphic="END1.png" no_graphic="../../tyrano/images/system/noimage.png" x=60 y=130 width=256 height=144 folder="bgimage" ]
+[cg_image_button graphic="END2.jpg" no_graphic="../../tyrano/images/system/noimage.png" x=360 y=130 width=256 height=144 folder="bgimage" ]
+[cg_image_button graphic="END3.jpg" no_graphic="../../tyrano/images/system/noimage.png" x=660 y=130 width=256 height=144 folder="bgimage" ]
+[cg_image_button graphic="END4.jpg" no_graphic="../../tyrano/images/system/noimage.png" x=960 y=130 width=256 height=144 folder="bgimage" ]
+[cg_image_button graphic="END5.jpg" no_graphic="../../tyrano/images/system/noimage.png" x=60 y=330 width=256 height=144 folder="bgimage" ]
+[cg_image_button graphic="END6.jpg" no_graphic="../../tyrano/images/system/noimage.png" x=360 y=330 width=256 height=144 folder="bgimage" ]
+[cg_image_button graphic="END7.jpg" no_graphic="../../tyrano/images/system/noimage.png" x=660 y=330 width=256 height=144 folder="bgimage" ]
+[cg_image_button graphic="END8.jpg" no_graphic="../../tyrano/images/system/noimage.png" x=960 y=330 width=256 height=144 folder="bgimage" ]
+[cg_image_button graphic="END9.jpg" no_graphic="../../tyrano/images/system/noimage.png" x=60 y=530 width=256 height=144 folder="bgimage" ]
 @jump target="*common"
 
 *common
