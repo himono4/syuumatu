@@ -474,8 +474,9 @@
 [fadeoutbgm time=500]
 やっぱり、世界を終わらせたくない。[n]
 と告げると、マキメは満足そうな顔をして頷いた。[n]
-[playbgm storage="iwashiro_rusu_no_shiro_de_odoru.mp3"]
+
 [chara_mod name="makime" face="tuuzyou"]
+[playbgm storage="iwashiro_rusu_no_shiro_de_odoru.mp3"]
 【マキメ】「そうだよね」[n]
 【マキメ】「君なら、そう言うと思っていた」[n]
 「もしかして、これってある種の誘導尋問？」[n]

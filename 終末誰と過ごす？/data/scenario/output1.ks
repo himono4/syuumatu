@@ -2,7 +2,7 @@
 [cm  ]
 [clearfix]
 [start_keyconfig]
-
+[fadeoutbgm time=500]
 [layopt layer="1" visible="true"]
 [bg storage="黒.png" time=100]
 [bg storage="終末まであと5日.png" time=1000]
@@ -708,15 +708,13 @@ f.favo_minato +=1
 【ミナト】「わかったよ。あんたが言う通り、死ぬのは待ってあげる」[n]
 なんだか感慨深かった。[n]
 ミナトくんが私の言葉で、今すぐ死ぬのをやめてくれた。[n]
-自分の行動で、他人を変えること。それこそがきっと、生きるということなのだろう。[n]
-終末を目の前にしてようやく私は、生の実感を知った。[n]
 [chara_mod name="minato" face="tuuzyou"]
 【ミナト】「なんだよ、そんな嬉しそうな顔して。気味悪いなあ」[n]
 「もとからこういう顔なんだよ」[n]
 【ミナト】「ずいぶんな間抜け面で生まれたんだな」[n]
 「相変わらず口は悪いんだね」[n]
 【ミナト】「もとからこういう口調なんだよ。あーもう、気分を害された。早く帰ってくれないか」[n]
-ミナトくんはただ死ぬのをやめてくれただけで、別段性格が良くなったわけではない。[n]
+ミナトくんはただ死ぬのをやめてくれただけで、ツンケンした態度は変わらない。[n]
 「わかった。それじゃ、またね」[n]
 [chara_mod name="minato" face="hohoemi"]
 【ミナト】「……ああ、また」[n]
@@ -1509,10 +1507,11 @@ sf.rituki_t += 1
 [chara_mod name="hiro" face="hohoemi"]
 【ヒロ】「ま、別に俺のとこに来ようが邪険にはしないから、最終的にはお前の好きにすればいい」[n]
 「わかった」[n]
+[chara_hide name="hiro"]
 まったく、ヒロは本当に立派な教師で兄だ。[n]
 だけどやっぱり私も血縁だから、わかっているのだ。[n]
 ヒロはだいぶ、気を張っているんだっていうことを。[n]
-[chara_hide name="hiro"]
+
 [fadeoutbgm time=500]
 [iscript]
 f.favo_hiro +=1
@@ -1570,9 +1569,10 @@ f.favo_hiro +=1
 「もう、悲しまないで」[n]
 【ヒロ】「……ああ」[n]
 まるで幼い子どものように頷くヒロ。[n]
+[chara_hide name="hiro"]
 私は知っているのだ。[n]
 本当のヒロは、こっちなんだって。[n]
-[chara_hide name="hiro"]
+
 [fadeoutbgm time=500]
 [iscript]
 f.favo_hiro +=1
@@ -1630,9 +1630,10 @@ f.favo_hiro +=1
 「そうだよ、ヒロのくせに生意気だよ」[n]
 「最後の最後まで、カッコつけ続けようなんて」[n]
 【ヒロ】「……わりぃな、性分なんだよ」[n]
+[chara_hide name="hiro"]
 だけど祈りは一方通行気味のままヒロの中を抜けていく。[n]
 それがやっぱり、悔しかった。[n]
-[chara_hide name="hiro"]
+
 [fadeoutbgm time=500]
 [iscript]
 f.favo_hiro +=1
@@ -1786,9 +1787,10 @@ f.favo_hiro +=1
 ;ヒロ　微笑み[n]
 [chara_mod name="hiro" face="hohoemi"]
 【ヒロ】「……ああ」[n]
+[chara_hide name="hiro"]
 最後くらいは家族と一緒に。[n]
 私が認める、たった一人の家族と一緒に過ごしたかった。[n]
-[chara_hide name="hiro"]
+
 [fadeoutbgm time=500]
 [iscript]
 f.favo_hiro +=1
